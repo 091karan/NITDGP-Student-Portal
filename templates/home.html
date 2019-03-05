@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css') }}">
+</head>
+<body background="{{ url_for('static',filename='images/bg2.png') }}">
+	<div class="navbar">
+	  <li><a class="active" href="#"><i class="fa fa-fw fa-home"></i> Student Portal</a> </li>
+	  <li style="float:right; margin-right: 20px; "><a href="login"><i class="fa fa-fw fa-user"></i> Login</a></li>
+	  <li style="float: right;"><a href="register"><i class="fa fa-address-card-o"></i> Register</a> </li>
+
+	</div>
+
+	<div style="margin-top:100px; margin-bottom: 150px" class="xyz">
+
+    <input checked id="one" name="multiples" type="radio" value="1">
+        <label for="one">1</label>
+
+    <input id="two" name="multiples" type="radio" value="2">
+        <label for="two">2</label>
+
+        <input id="three" name="multiples" type="radio" value="3">
+        <label for="three">3</label>
+
+        <input id="four" name="multiples" type="radio" value="4">
+        <label for="four">4</label>
+
+        <input id="five" name="multiples" type="radio" value="5">
+        <label for="five">5</label>
+
+        <input id="six" name="multiples" type="radio" value="6">
+        <label for="six">6</label>
+
+        <input id="seven" name="multiples" type="radio" value="7">
+        <label for="seven">7</label>
+
+        <input id="eight" name="multiples" type="radio" value="8">
+        <label for="eight">8</label>
+
+    <div class="container">
+      <div class="carousel">
+        <img src="{{ url_for('static',filename='images/image1.jpg') }}" alt="Landscape 1">
+        <img src="{{ url_for('static',filename='images/image2.jpg') }}" alt="Landscape 2">
+        <img src="{{ url_for('static',filename='images/image3.jpg') }}" alt="Landscape 3">
+        <img src="{{ url_for('static',filename='images/image4.jpg') }}" alt="Landscape 4">
+        <img src="{{ url_for('static',filename='images/image1.jpg') }}" alt="Landscape 5">
+        <img src="{{ url_for('static',filename='images/image2.jpg') }}" alt="Landscape 6">
+        <img src="{{ url_for('static',filename='images/image3.jpg') }}" alt="Landscape 7">
+        <img src="{{ url_for('static',filename='images/image4.jpg') }}" alt="Landscape 8">
+      </div>
+    </div>
+
+  </div>
+
+	<div class="footer">
+		<div style="margin: 20px;">
+			<span style="font-size: 18px;">This portal is meant for students of NIT Durgapur. Register yourself to get started.</span>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+      <form action="" name = "signup">
+      <div>
+        <label for="firstName"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="firstName" onblur="return validateSignUp('firstName')" required>
+        <span style="color: red; font-size: 70%" id='firstName'></span>
+      </div>
+
+      <div>
+        <label for="lastName"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="lastName" onblur="return validateSignUp('lastName')" required>
+        <span style="color: red; font-size: 70%" id='lastName'></span>
+      </div>
+
+      <div>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" onblur="return validateSignUp('email')" required>
+        <span style="color: red; font-size: 70%" id='email'></span>
+      </div>
+
+      <div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" onblur="return validateSignUp('psw')" required>
+        <span style="color: red; font-size: 70%" id='psw'></span>
+      </div>
+
+      <div>
+        <label for="psw"><b>Roll Number</b></label>
+        <input type="text" placeholder="Enter Roll Number" name="roll" onblur="return validateSignUp('roll')" required>
+        <span style="color: red; font-size: 70%" id='roll'></span>
+      </div>
+
+      <div>
+        <label for="dept"><b>Branch</b></label>
+        <select name="dept">
+          <option>BT</option>
+          <option>CE</option>
+          <option>CH</option>
+          <option>CSE</option>
+          <option>EE</option>
+          <option>IT</option>
+          <option>ME</option>
+          <option>MME</option>
+        </select>
+      </div>
+
+      <div>
+        <label for='sem'><b>Semester</b></label>
+        <select name = "sem">
+          <option>1st</option>
+          <option>2nd</option>
+          <option>3rd</option>
+          <option>4th</option>
+          <option>5th</option>
+          <option>6th</option>
+          <option>7th</option>
+          <option>8th</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="graduation"><b>Expected Graduation Year</b></label>
+        <input type="text" placeholder="Graduation Year" name="graduation" onblur="return validateSignUp('graduation')" required>
+        <span style="color: red; font-size: 70%" id='graduation'></span>
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+
+
+
+    <script>
+
+// Validation of the Sign Up form
+function validateSignUp(inputfield)
+{
+  switch(inputfield)
+  {
+    case 'firstName': patt = /^[a-zA-Z]+$/; display = "* Please use English alphabets for first name!"; break;
+    case 'lastName': patt = /^[a-zA-Z]+$/; display = "* Please use English alphabets for last name!"; break;
+    case 'email': patt = /^[a-zA-Z0-9.]+$/; display = "* Please use alphanumerics for email address!"; break;
+    case 'psw': patt = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                display = "* Your password must contain one lowercase alphabet, one uppercase alphabet, one digit, one special character and length must be in between 8 and 16.";
+                break;
+    case 'roll': patt = /^[a-zA-Z0-9]+$/; display = "* Please use alphanumerics for roll number!"; break;
+    case 'dept': display = "* Please choose valid option for branch!"; break;
+    case 'sem': display = "* Please choose valid option for semester!"; break;
+    case 'graduation': patt = /^[0-9]$/; display = "* Graduation year must contain digits"; break;
+  }
+
+  var val = document.forms["signup"][inputfield].value;
+
+  if(inputfield == 'email')
+  {
+    var mail = val.split('@')
+    var res = true;
+    if(!patt.test(mail[0]))
+    {
+      res = false;
+    }
+    if(mail[1] != "btech.nitdgp.ac.in")
+    {
+      display = display +"\n* Please use college email ID!";
+      res = false;
+    }
+    if(res == false)
+      document.getElementById(inputfield).innerText = display;
+    else
+      document.getElementById(inputfield).innerText = '';
+    return res;
+  }
+  else
+  {
+    if(!patt.test(val))
+    {
+      document.getElementById(inputfield).innerText = display;
+      return false;
+    }
+    else
+      document.getElementById(inputfield).innerText = '';
+  }
+}
+</script>
+
+
+</body>
+</html>

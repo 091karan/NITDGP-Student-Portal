@@ -1,0 +1,60 @@
+input {
+  width: 90%;
+  padding: 15px 0px;
+  margin: 8px 0;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #EEEEEE;
+  font-size: 20px;
+  margin-bottom: 5%;
+  font-family: sans-serif;
+  border-opac
+}
+
+select{
+	  width: 90%;
+    padding: 15px 0px;
+    margin: 8px 0;
+    border-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #EEEEEE;
+    font-size: 20px;
+    margin-bottom: 5%;
+    font-family: sans-serif;
+    border-opac
+}
+
+option{
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+
+
+#registration_div{
+	width: 28%;
+	margin-left: 32%;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 5%;
+	padding: 4%;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+
+
+::placeholder{
+	font-weight: ;
+	color: #A8A8A8;
+
+}
+
+.submit1{
+	font-size: 150%;
+	margin-left: 33%;
+	font-family: sans-serif;
+}

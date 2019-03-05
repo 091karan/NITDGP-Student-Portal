@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ADMIN PANEL</title>
+</head>
+<body>
+
+<h1>USERS</h1>
+{% for u in users %}
+
+{{ u.first_name }}
+{{ u.last_name }}
+{{ u.email }}
+{{ u.password }}
+{{ u.roll_no }}
+{{ u.branch }}
+{{ u.semester }}
+{{ u.graduation_year }}
+<br><br><br>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='register.css') }}">
+</head>
+<body background="{{ url_for('static',filename='images/regpage.jpg') }}">
+
+	<div id="registration_div" style="">
+    <h1 style="font-family: sans-serif; margin-left: 8%;">Registration Form</h1>
+	  <br>
+
+		<form action="{{ url_for('register') }}" method = "POST" name = "signup">
+
+				<div>
+        <input type="text" placeholder="Enter First Name" name="firstName" onblur="return validateSignUp('firstName')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='firstName'></span>
+      	</div>
+
+      <div>
+
+        <input type="text" placeholder="Enter Last Name" name="lastName" onblur="return validateSignUp('lastName')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='lastName'></span>
+      </div>
+
+      <div>
+
+        <input type="text" placeholder="Enter Email" name="email" onblur="return validateSignUp('email')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='email'></span>
+      </div>
+
+      <div>
+
+        <input type="password" placeholder="Enter Password" name="psw" onblur="return validateSignUp('psw')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='psw'></span>
+      </div>
+
+      <div>
+
+        <input type="text" placeholder="Enter Roll Number" name="roll" onblur="return validateSignUp('roll')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='roll'></span>
+      </div>
+
+      <div style="padding-top:10px;">
+
+        <select name="dept">
+          <option>Biotechnology</option>
+          <option>Chemical Engineering</option>
+          <option>Civil Engineering</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Information Technology</option>
+          <option>Mechanical Engineering</option>
+          <option>Metallurgical Engineering</option>
+        </select>
+      </div>
+
+      <div style="padding-top:10px;">
+
+        <select name = "sem">
+          <option>1st Semester</option>
+          <option>2nd Semester</option>
+          <option>3rd Semester</option>
+          <option>4th Semester</option>
+          <option>5th Semester</option>
+          <option>6th Semester</option>
+          <option>7th Semester</option>
+          <option>8th Semester</option>
+        </select>
+      </div>
+
+      <div>
+
+        <input type="text" placeholder="Graduation Year" name="graduation" onblur="return validateSignUp('graduation')" required>
+        <span style="color: red; font-size: 70%" id='graduation'></span>
+      </div>
+
+      <br>
+      <br>
+
+      <div>
+        <button id="buttonSubmit" type="submit" class="submit1"><span style="font-family: sans-serif;">Submit</span></button>
+      </div>
+
+    </form>
+
+
+	</div>
+
+
+<script src="{{ url_for('static',filename='register.js') }}"></script>
+</body>
+</html>
