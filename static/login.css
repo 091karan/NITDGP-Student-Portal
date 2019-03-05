@@ -1,0 +1,42 @@
+body
+{
+	background-image: url("login.jpg");
+}
+
+.log
+{
+	top: 15%;
+	position: absolute;
+	left: 35%;
+	margin: auto;
+	width: 30%;
+	height: 65%;
+	background-color: white;
+	border-radius: 10px;
+}
+
+input[type=text]{
+	  font-family: 'Work Sans 700', sans-serif;
+	  width: 100%;
+	  padding: 12px 20px;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+}
+
+input[type=submit]
+{
+	 background-color: #491E55;
+	 color: #FFFFFF;
+	 font-family: 'Work Sans', sans-serif;
+	 width: 30%;
+	 padding: 12px 20px;
+	 display: inline-block;
+	 border: 1px solid #ccc;
+	 border-radius: 4px;
+	 box-sizing: border-box;
+	 margin-left: 35%;
+	 margin-top : 5%;
+}
+
