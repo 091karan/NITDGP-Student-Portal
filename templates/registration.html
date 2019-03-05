@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+</head>
+<body>
+
+	<div id="registration_div" style="">
+
+
+    <h1 style="font-family: 'Open Sans', sans-serif; margin-left: 4%;">Registration Form</h1>
+    <br>
+    <form action="" name = "signup">
+      <div>
+        
+        <input type="text" placeholder="Enter First Name" name="firstName" 
+        onblur="validateSignUp('firstName')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='firstName'></span>
+      </div>
+
+      <div>
+        
+        <input type="text" placeholder="Enter Last Name" name="lastName"
+         onblur="return validateSignUp('lastName')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='lastName'></span>
+
+      </div>
+
+      <div>
+
+        <div>
+        <input name="date" placeholder="Enter Date of Birth" id = "abc" onfocus="(this.type='date')"
+        onblur="return DateValidation()" required>
+        <br>
+        <span style="color: red; font-size:70%"; id = "date"> </span>
+      </div>
+        
+        <input type="text" placeholder="Enter Email" name="email"
+         onblur="return validateSignUp('email')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='email'></span>
+      </div>
+
+
+      <div>
+        
+        <input type="text" placeholder="Enter Personal Address" name="address"
+         onblur="return validateSignUp('address')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='address'></span>
+
+      </div>
+
+
+       <div>
+        
+        <input type="text" placeholder="Enter Contact Details" name="contact" 
+        onblur="validateSignUp('contact')" required>
+        <br>
+        <span style="color: red; font-size: 70%" id='contact'></span>
+      </div>
+
+        <select class="" name="category">
+          <option>General</option>
+          <option>OBC</option>
+          <option>SC</option>
+          <option>ST</option>
+          <option>PWD</option>
+        </select>
+
+
+
+      <div>
+      
+        <input type="text " placeholder="Enter Password" name="psw" 
+        onblur="return validateSignUp('psw')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='psw'></span>
+
+      </div>
+
+      <div>
+      
+        <input type="text" placeholder="Re-enter Password" name="psw1" 
+        onblur="return validateSignUp('psw1')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='psw1'></span>
+
+      </div>
+
+     
+     
+      
+        
+
+      <br>
+      <br>
+
+        <div >
+          <button type="submit" class="button button4">
+          <span style="font-family: sans-serif;">Submit</span></button>
+        </div>
+
+    </form>
+
+
+	</div>
+
+
+
+
+
+
+<script src="registration.js"></script>
+</body>
+</html>
