@@ -12,80 +12,97 @@
 
 		<form action="{{ url_for('register') }}" method = "POST" name = "signup">
 
+			<div>
+
+				<input type="text" placeholder="Enter First Name" name="firstName"
+				onblur="validateSignUp('firstName')" required>
+				<br>
+				<span style="color: red; font-size: 70%" id='firstName'></span>
+			</div>
+
+			<div>
+
+				<input type="text" placeholder="Enter Last Name" name="lastName"
+				 onblur="return validateSignUp('lastName')" required>
+				<br>
+				<span style="color: red; font-size: 70%" id='lastName'></span>
+
+			</div>
+
+			<div>
+
 				<div>
-        <input type="text" placeholder="Enter First Name" name="firstName" onblur="return validateSignUp('firstName')" required>
-        <br>
-        <span style="color: red; font-size: 70%" id='firstName'></span>
-      	</div>
+				<input name="dateOfBirth" placeholder="Enter Date of Birth" id = "abc" onfocus="(this.type='date')"
+				onblur="return DateValidation()" required>
+				<br>
+				<span style="color: red; font-size:70%"; id = "date"> </span>
+			</div>
 
-      <div>
+				<input type="text" placeholder="Enter Email" name="email"
+				 onblur="return validateSignUp('email')"  required>
+				<br>
+				<span style="color: red; font-size: 70%" id='email'></span>
+			</div>
 
-        <input type="text" placeholder="Enter Last Name" name="lastName" onblur="return validateSignUp('lastName')" required>
-        <br>
-        <span style="color: red; font-size: 70%" id='lastName'></span>
-      </div>
 
-      <div>
+			<div>
 
-        <input type="text" placeholder="Enter Email" name="email" onblur="return validateSignUp('email')" required>
-        <br>
-        <span style="color: red; font-size: 70%" id='email'></span>
-      </div>
+				<input type="text" placeholder="Enter Personal Address" name="address"
+				 onblur="return validateSignUp('address')" required>
+				<br>
+				<span style="color: red; font-size: 70%" id='address'></span>
 
-      <div>
+			</div>
 
-        <input type="password" placeholder="Enter Password" name="psw" onblur="return validateSignUp('psw')" required>
-        <br>
-        <span style="color: red; font-size: 70%" id='psw'></span>
-      </div>
 
-      <div>
+			 <div>
 
-        <input type="text" placeholder="Enter Roll Number" name="roll" onblur="return validateSignUp('roll')" required>
-        <br>
-        <span style="color: red; font-size: 70%" id='roll'></span>
-      </div>
+				<input type="text" placeholder="Enter Contact Details" name="contact"
+				onblur="validateSignUp('contact')" required>
+				<br>
+				<span style="color: red; font-size: 70%" id='contact'></span>
+			</div>
 
-      <div style="padding-top:10px;">
+				<select class="" name="category">
+					<option>General</option>
+					<option>OBC</option>
+					<option>SC</option>
+					<option>ST</option>
+					<option>PWD</option>
+				</select>
 
-        <select name="dept">
-          <option>Biotechnology</option>
-          <option>Chemical Engineering</option>
-          <option>Civil Engineering</option>
-          <option>Computer Science</option>
-          <option>Electrical Engineering</option>
-          <option>Information Technology</option>
-          <option>Mechanical Engineering</option>
-          <option>Metallurgical Engineering</option>
-        </select>
-      </div>
 
-      <div style="padding-top:10px;">
 
-        <select name = "sem">
-          <option>1st Semester</option>
-          <option>2nd Semester</option>
-          <option>3rd Semester</option>
-          <option>4th Semester</option>
-          <option>5th Semester</option>
-          <option>6th Semester</option>
-          <option>7th Semester</option>
-          <option>8th Semester</option>
-        </select>
-      </div>
+			<div>
 
-      <div>
+				<input type="text " placeholder="Enter Password" name="psw"
+				onblur="return validateSignUp('psw')"  required>
+				<br>
+				<span style="color: red; font-size: 70%" id='psw'></span>
 
-        <input type="text" placeholder="Graduation Year" name="graduation" onblur="return validateSignUp('graduation')" required>
-        <span style="color: red; font-size: 70%" id='graduation'></span>
-      </div>
+			</div>
 
-      <br>
-      <br>
+			<div>
 
-      <div>
-        <button id="buttonSubmit" type="submit" class="submit1"><span style="font-family: sans-serif;">Submit</span></button>
-      </div>
+				<input type="text" placeholder="Re-enter Password" name="psw1"
+				onblur="return validateSignUp('psw1')"  required>
+				<br>
+				<span style="color: red; font-size: 70%" id='psw1'></span>
+
+			</div>
+
+
+
+
+
+
+			<br>
+			<br>
+
+				<div >
+					<button type="submit" class="button button4">
+					<span style="font-family: sans-serif;">Submit</span></button>
+				</div>
 
     </form>
 

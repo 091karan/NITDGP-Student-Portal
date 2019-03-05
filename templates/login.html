@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,3 +25,31 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Login Page</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='login.css') }}">
+</head>
+<body background="{{ url_for('static',filename='images/login.jpg') }}">
+
+	<form action="{{ url_for('login') }}" method = "POST" name = "login">
+		<div class="log" style="padding: 1%;">
+			<h1 style="text-align: center; font-family: sans-serif;"> Login Page</h1>
+
+			<h2 >Email</h2>
+			<input type="text" name="email" placeholder="ka.16U10415@btech.nitdgp.ac.in">
+
+			<h2>Password</h2>
+			<input type="text" name="password" placeholder="">
+
+			<input type="submit" name="submit" >
+			</div>
+	</form>
+
+</body>
+</html>
+>>>>>>> Stashed changes
