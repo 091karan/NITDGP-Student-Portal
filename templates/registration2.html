@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Details</title>
+	<link rel="stylesheet" type="text/css" href="registration2.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+</head>
+<body>
+
+	<div id="registration_div" style="">
+
+
+    <h1 style="font-family: 'Open Sans', sans-serif; margin-left: 10%;">Academic Details</h1>
+    <br>
+    <form action="" name = "signup">
+       <div>
+   
+        <input type="text" placeholder="Enter Roll Number" name="roll" 
+        onblur="return validateSignUp('roll')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='roll'></span>
+
+      </div>
+
+
+      <div>
+        
+        <input type="text" placeholder="Graduation Year" name="graduation"
+         onblur="return validateSignUp('graduation')" required>
+         <br>
+        <span style="color: red; font-size: 70%" id='graduation'></span>
+
+      </div>
+
+      <div>
+        
+        <input type="text" placeholder="No. of backlogs" name="backlogs"
+         onblur="return validateSignUp('backlogs')" required>
+         <br>
+        <span style="color: red; font-size: 70%" id='backlogs'></span>
+
+      </div>
+
+      <div>
+        <input type="file" id = "image" name="pic" accept="image/*" placeholder="picture" >
+        
+      </div>
+        
+        <select class="" name="dept" required>
+          <option value="" disabled selected> Choose your Department</option>
+          <option>Biotechnology</option>
+          <option>Chemical Engineering</option>
+          <option>Civil Engineering</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Information Technology</option>
+          <option>Mechanical Engineering</option>
+          <option>Metallurgical Engineering</option>
+        </select>
+      
+
+     
+        
+        <select name = "sem" onchange="semester();" onfocus="this.selectedIndex = -1;" required>
+          <option value="" disabled selected> Choose your Semester</option>
+          <option>1st Semester</option>
+          <option>2nd Semester</option>
+          <option>3rd Semester</option>
+          <option>4th Semester</option>
+          <option>5th Semester</option>
+          <option>6th Semester</option>
+          <option>7th Semester</option>
+          <option>8th Semester</option>
+        </select>
+      
+
+      
+      <div id ="Sem1" style="display: none">
+   
+        <input type="text" placeholder="Sem 1 sgpa" name="sgpa"
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sgpa'></span>
+
+      </div>
+
+       <div id="Sem2" style="display: none">
+   
+        <input type="text" placeholder="Sem 2 sgpa" name="sgpa" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='spga'></span>
+
+      </div>
+
+       <div id="Sem3" style="display: none">
+   
+        <input type="text" placeholder="Sem 3 sgpa" name="sgpa" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sgpa'></span>
+
+      </div>
+
+       <div id="Sem4" style="display: none">
+   
+        <input type="text" placeholder="Sem 4 sgpa" name="sgpa" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sem4'></span>
+
+      </div>
+
+
+       <div id = 'Sem5' style="display: none">
+   
+        <input type="text" placeholder="Sem 5 sgpa" name="sem5" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sem5'></span>
+
+      </div>
+
+      <div id = 'Sem6' style="display: none">
+   
+        <input type="text" placeholder="Sem 6 sgpa" name="sem6" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sem6'></span>
+
+      </div>
+
+      <div id = 'Sem7' style="display: none">
+   
+        <input type="text" placeholder="Sem 7 sgpa" name="sem7" 
+        onblur="return validateSignUp('sgpa')"  required>
+        <br>
+        <span style="color: red; font-size: 70%" id='sem5'></span>
+
+      </div>
+      
+
+
+      <br>
+      <br>
+
+      <div>
+        <button type="submit" class="button button4">
+        <span style="font-family: sans-serif;">Submit</span></button>
+      </div>
+
+    </form>
+
+
+	</div>
+
+
+
+
+<script src="registration2.js"></script>
+</body>
+</html>
